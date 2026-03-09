@@ -34,7 +34,7 @@ const skills = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* background */}
       <div className="absolute inset-0">
         <img
@@ -91,12 +91,19 @@ const Hero = () => {
             {/* cta */}
             <div className="flex flex-wrap  gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />{" "}
+                <a
+                  href="#contact"
+                  className="flex items-center justify-center gap-2"
+                >
+                  Contact Me <ArrowRight className="w-5 h-5" />{" "}
+                </a>
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a href="/Matende_Madiba_CV.pdf" download="Matende_Madiba_CV.pdf">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
             {/* social links */}
 
